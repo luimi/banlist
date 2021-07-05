@@ -9,7 +9,7 @@ databaseURI: `${process.env.MONGODB}`,
   serverURL: `http://localhost:${process.env.PORT}/parse`
 });
 
-var options = { allowInsecureHTTP: false };
+var options = { allowInsecureHTTP: true };
 
 var dashboard = new ParseDashboard({
   "apps": [
@@ -18,6 +18,12 @@ var dashboard = new ParseDashboard({
       "appId": process.env.APPID,
       "masterKey": process.env.MASTERKEY,
       "appName": "BanList"
+    }
+  ],
+  "users": [
+    {
+      "user":"admin",
+      "pass":"admin"
     }
   ]
 }, options);
