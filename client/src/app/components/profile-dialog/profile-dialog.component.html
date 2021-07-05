@@ -4,8 +4,7 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img class="icon" 
-            [src]="'http://ddragon.leagueoflegends.com/cdn/11.13.1/img/profileicon/'+ player?.summoner?.get('profileIcon') + '.png'">
+          <app-profile-icon [icon]="player?.summoner?.get('profileIcon')"></app-profile-icon>
         </ion-col>
         <ion-col>
           <h1>{{player?.champion?.get("name")}}</h1>
