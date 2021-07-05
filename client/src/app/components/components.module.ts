@@ -10,6 +10,7 @@ import { AveragesComponent } from './averages/averages.component';
 import { ReportItemComponent } from './report-item/report-item.component';
 import { ReportDialogComponent } from './report-dialog/report-dialog.component';
 import { ChampionSplashComponent } from './champion-splash/champion-splash.component';
+import { ProfileIconComponent } from './profile-icon/profile-icon.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { ChampionSplashComponent } from './champion-splash/champion-splash.compo
     IonicModule,
     TranslateModule
   ],
-  declarations: [ProfileDialogComponent, AveragesComponent, ReportItemComponent, ReportDialogComponent, ChampionSplashComponent],
-  exports: [ProfileDialogComponent, AveragesComponent, ReportItemComponent, ReportDialogComponent, ChampionSplashComponent]
+  declarations: [ProfileDialogComponent, AveragesComponent, ReportItemComponent, ReportDialogComponent, ChampionSplashComponent, ProfileIconComponent],
+  exports: [ProfileDialogComponent, AveragesComponent, ReportItemComponent, ReportDialogComponent, ChampionSplashComponent, ProfileIconComponent]
 })
 export class ComponentsModule {}
