@@ -1,0 +1,25 @@
+<ion-grid class="report ion-margin-bottom">
+  <ion-row>
+    <ion-col size="2">
+      <img src="https://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/{{report?.get('champion').get('name')}}.png" class="game-icon">
+    </ion-col>
+    <ion-col>
+      <ion-icon *ngIf="report?.get('pro')" src="../assets/icon/trophy.svg" size="large" class="ion-padding"></ion-icon>
+      <ion-icon *ngIf="report?.get('nice')" src="../assets/icon/thumbs-up.svg" size="large" class="ion-padding"></ion-icon>
+      <ion-icon *ngIf="report?.get('feeder')" src="../assets/icon/skull.svg" size="large" class="ion-padding"></ion-icon>
+      <ion-icon *ngIf="report?.get('flamer')" src="../assets/icon/fire.svg" size="large" class="ion-padding"></ion-icon>
+      <ion-icon *ngIf="report?.get('leaver')" src="../assets/icon/door-open.svg" size="large" class="ion-padding"></ion-icon>
+      <ion-icon *ngIf="report?.get('troll')" src="../assets/icon/tongue-wink.svg" size="large" class="ion-padding"></ion-icon>
+    </ion-col>
+    <ion-col size="auto">
+      <span>{{moment(report?.get("createdAt")).startOf('hour').fromNow()}}</span>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="report?.get('note')">
+    <ion-col class="ion-padding-start">
+      <p>
+        {{report.get("note")}}
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-grid>

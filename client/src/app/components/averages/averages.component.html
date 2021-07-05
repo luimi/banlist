@@ -1,0 +1,24 @@
+<div *ngIf="averages">
+  <h2 class="ion-text-center">{{"general.reportPositive" | translate}}</h2>
+  <ion-item color="primary" lines="none" *ngFor="let category of calculate.categoriesBy.positive">
+    <ion-icon [src]="category.icon" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngIf="averages[category.name]>0" [size]="averages[category.name]" class="game-positive"></ion-col>
+        <ion-col *ngIf="averages[category.name]===0" >{{"general.noReports" | translate}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</div>
+<div *ngIf="averages">
+  <h2 class="ion-text-center">{{"general.reportNegative" | translate}}</h2>
+  <ion-item color="primary" lines="none" *ngFor="let category of calculate.categoriesBy.negative">
+    <ion-icon [src]="category.icon" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngIf="averages[category.name]>0" [size]="averages[category.name]" class="game-negative"></ion-col>
+        <ion-col *ngIf="averages[category.name]===0" >{{"general.noReports" | translate}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</div>

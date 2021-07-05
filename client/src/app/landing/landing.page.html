@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="center-div">
+    <app-champion-splash *ngIf="summoner" [name]="summoner?.main?.name"></app-champion-splash>
+    <div class="ion-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              [src]="'http://ddragon.leagueoflegends.com/cdn/11.11.1/img/profileicon/'+ summoner?.profileIcon + '.png'">
+          </ion-col>
+          <ion-col>
+            <h3>{{summoner?.name}}</h3>
+            <h3>LVL. {{summoner?.summonerLevel}}</h3>
+          </ion-col>
+          <ion-col>
+            <img [src]="'./assets/ranked/'+ (summoner?.rankSolo?summoner.rankSolo:'UNRANKED') + '.png'">
+          </ion-col>
+          <ion-col>
+            <img [src]="'./assets/ranked/'+ (summoner?.rank5x5?summoner.rank5x5:'UNRANKED') + '.png'">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <button class="button-general" (click)="getCurrentMatch()">{{"landing.live" | translate}}</button>
+      </ion-item>
+      <app-averages *ngIf="averages" [averages]="averages"></app-averages>
+    </div>
+  </div>
+
+
+</ion-content>

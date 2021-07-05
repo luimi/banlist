@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="center-div">
+    <h1 class="ion-text-center">{{"summoner.title" | translate}}</h1>
+    <ion-item color="primary">
+      <ion-input placeholder="{{'summoner.placeholder' | translate}}" [(ngModel)]="summoner"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-top">
+      <button class="button-intro" [disabled]="!summoner" (click)="search()">{{"general.search" | translate}}</button>
+    </ion-item>
+  </div>
+
+</ion-content>

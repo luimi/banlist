@@ -1,0 +1,34 @@
+<ion-content>
+  <app-champion-splash [name]="player?.champion?.get('name')"></app-champion-splash>
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img class="icon" 
+            [src]="'http://ddragon.leagueoflegends.com/cdn/11.11.1/img/profileicon/'+ player?.summoner?.get('profileIcon') + '.png'">
+        </ion-col>
+        <ion-col>
+          <h1>{{player?.champion?.get("name")}}</h1>
+          <h3>{{player?.summoner?.get("name")}}</h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <app-averages *ngIf="averages" [averages]="averages"></app-averages>
+    <h2 class="ion-text-center">Reportes</h2>
+    <ion-segment value="all" color="secondary" mode="md" [(ngModel)]="reportsFrom" (ionChange)="getReports()">
+      <ion-segment-button value="all">
+        <ion-label>{{"profileDialog.all" | translate}}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="me">
+        <ion-label>{{"profileDialog.mine" | translate}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <app-report-item *ngFor="let report of reports" [report]="report"></app-report-item>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-item>
+    <button class="button-general" (click)="dismiss()">{{"general.exit" | translate}}</button>
+  </ion-item>
+</ion-footer>

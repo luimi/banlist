@@ -1,0 +1,25 @@
+.flag {
+    position: absolute;
+    z-index: 3;
+}
+.icon {
+    margin-top: 120px;
+    width: 150px;
+    z-index: 1;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.lvl {
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 260px;
+    padding: 7px;
+    border-radius: 50%;;
+}
+.update {
+    margin-top: 280px;
+}

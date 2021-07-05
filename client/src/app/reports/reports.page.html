@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{"reports.title" | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="center-div">
+    <app-report-item *ngFor="let report of reports" [report]="report"></app-report-item>
+  </div>
+</ion-content>

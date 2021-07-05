@@ -1,0 +1,24 @@
+const Server = Parse.Object.extend("Server");
+const data = [
+	{name:"Turkey",url:"tr1.api.riotgames.com"},
+	{name:"Russia",url:"ru.api.riotgames.com"},
+	{name:"North America",url:"na1.api.riotgames.com"},
+	{name:"Latin America Sur",url:"la2.api.riotgames.com"},
+	{name:"Latin America Noth",url:"la1.api.riotgames.com"},
+	{name:"Korea",url:"kr.api.riotgames.com"},
+	{name:"Japan",url:"jp1.api.riotgames.com"},
+	{name:"Europe West",url:"euw1.api.riotgames.com"},
+	{name:"Europe Nordic & East",url:"eun1.api.riotgames.com"},
+	{name:"Brazil",url:"br1.api.riotgames.com"}
+];
+
+for(let i = 0 ; i < data.length ; i++) {
+	let server = new Server();
+	server.set("name",data[i].name);
+	server.set("url",data[i].url);
+	const acl = new Parse.ACL();
+  	acl.setPublicReadAccess(true);
+  	acl.setPublicWriteAccess(false);
+  	server.setACL(acl);
+  	await server.save();
+}

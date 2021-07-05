@@ -1,0 +1,82 @@
+{
+    "termns": {
+        "title":"Conducta del jugador",
+        "content1":"A continuación, explicaremos la conducta estándar para una buena convivencia entre tus compañeros de equipo y equipo enemigo.\n\nEl objetivo principal del juego es subir el rango de jugador por medio de las partidas clasificatorias. Ganar y perder, es parte del proceso.\n\nYa que entre partidas, somos emparejados con personas desconocidas, es normal que surjan diferencias o por lo contrario aprendizaje a nuevos estilos de juego mas efectivos de lo tradicional.\n\nLa idea principal de esta comunidad es prever a otros jugadores sobre el posible comportamiento de un jugador.",
+        "content2":"Aspectos positivos de calificación.",
+        "content3":"Aspectos negativos de calificación.",
+        "content4":"Cave resaltar que los reportes deberian hacerse estrictamente para partidas de clasificatoria, excepto reportar Flamer, ese tipo de jugadores deberian reportarse hasta en las partidas personalizadas.",
+        "contentPro":"Es aquel jugador que demostró un desempeño excepcional a lo largo de la partida ya sea victoria o derrota.",
+        "contentNice":"La comunicación con este jugador fue muy cordial, defendió a otro compañero por un abuso injustificado.",
+        "contentFeeder":"Un jugador que a pesar de las advertencias señaladas por sus compañeros, falta de visión en el mapa o falta de habilidad al jugar sigue muriendo y dándole ventajas al enemigo.",
+        "contentFlamer":"Alguien que increpa o insulta de forma exagerada y sin motivación racional a otros jugadores, con el único fin de provocar una situación hostil. Este es el punto mas importante, iniciar un dialogo con tus compañeros de forma negativa, afecta el rendimiento en ellos.",
+        "contentLeaver":"Aquel jugador que decide abandonar la partida. Bajo ciertas circunstancias estan los casos inevitables de perdida de conexion o energia electrica, que no deberian ser reportados.",
+        "contentTroll":"Jugador que se toma el juego en forma de broma, aporta de forma negativa las interacciones en equipo o contra el enemigo, selecciona un campeon que va en contra de los lineamientos estandares del juego.",
+        "contentAcept":"Acepto el código de jugador"
+    },
+    "server":{
+        "title":"Seleccione el servidor de su cuenta"
+    },
+    "summoner": {
+        "title":"Escribe el nombre de tu invocador",
+        "placeholder":"Nombre",
+        "error1":"Faltan parametros",
+        "error2":"Servidor no encontrado",
+        "error3":"Invocador no encontrado"
+    },
+    "landing": {
+        "live":"Ver partida en curso"
+    },
+    "game": {
+        "title":"Partida en curso",
+        "team":"Tu equipo",
+        "enemies":"Equipo enemigo",
+        "noReports":"Sin calificacion",
+        "error1":"Faltan parametros",
+        "error2":"Invocador no encontrado",
+        "error3":"No hay partida en curso"
+    },
+    "profileDialog":{
+        "all":"Todos",
+        "mine":"Mias"
+    },
+    "report": {
+        "title":"Nuevo reporte",
+        "titlePositive":"Aspectos positivos",
+        "titleNegative":"Aspectos negativos",
+        "positive1":"¡QUE PRO!",
+        "positive2":"Que agradable sujeto",
+        "negative1":"Mas muertes que en rambo",
+        "negative2":"¡Que fastidio!",
+        "negative3":"Para que juegas, si te vas a salir",
+        "negative4":"No lo quiero volver a ver en mi vida",
+        "comments":"Comentarios...",
+        "success":"¡Reporte enviado!",
+        "errors":{
+            "self":"¡No puedes reportarte a ti mismo!",
+            "notfound":"Hay un dato no valido",
+            "duplicated":"Ya existe un reporte a este usuario, de este juego"
+        }
+    },
+    "reports": {
+        "title":"Mis reportes"
+    },
+    "profile": {
+        "update":"Actualizar perfil",
+        "change":"Cambiar cuenta"
+    },
+    "general":{
+        "continue":"Continuar",
+        "search":"Buscar",
+        "ok":"Ok",
+        "error":"Error",
+        "reportPositive":"Calificaciones positivas",
+        "reportNegative":"Calificaciones negativas",
+        "noReports":"Sin calificacion",
+        "exit":"Salir",
+        "send":"Enviar",
+        "errors": {
+            "params": "Faltan parametros",
+            "server": "Servidor no encontrado"
+        }
+    }
+}

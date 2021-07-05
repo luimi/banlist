@@ -1,0 +1,131 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+  .button-intro {
+    border: 1px solid #07b1b2;
+    border-radius: 5px;
+    background-color: #1e2328;
+    color: #f0e6d2;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 30px 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button-intro:disabled {
+    border-color: #035859;
+    color: #635f57;
+  }
+  .button-intro:hover:enabled {
+    border-color: #09e8e9;
+    color: #fef3dd;
+  }
+  .button-general {
+    border: 1px solid #cdbe91;
+    background-color: #1e2328;
+    color: #cdbe91;
+    font-size: 15px;
+    padding: 10px 30px 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button-general:disabled {
+    border-color: #59523f;
+    color: #59523f;
+  }
+  .button-general:hover:enabled {
+    border-color: #f0dea9;
+    color: #f0dea9;
+  }
+  ion-checkbox {
+    --background: #010a13;
+    --border-color: #cdbe91;
+  }
+  .alert {
+    --background: #010a13;
+    .alert-wrapper.sc-ion-alert-md {
+      border: 1px solid #463714;
+      h2,
+      .alert-message,
+      .alert-button-inner {
+        color: #cdbe91;
+      }
+      .alert-button {
+        border: 2px solid #463714;
+        background-color: #1e2328;
+        padding: 10px 30px 10px 30px;
+      }
+      .alert-button:hover {
+        border: 2px solid #c89c3d;
+        color: #f0e6d2;
+      }
+    }
+  }
+  .champion-splash {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 100% 0;
+  }
+  .loading {
+    --spinner-color:#cdbe91;
+    .loading-wrapper.sc-ion-loading-ios, .loading-wrapper.sc-ion-loading-md {
+        background: transparent !important;
+        
+    }
+  }
+  .game-title {
+    text-align: center;
+    color: #f0e6d2;
+    padding: 10px 0px 10px 0px;
+  }
+  .game-title.ally {
+    background-color: #1ba9bd;
+  }
+  .game-title.enemy {
+    background-color: #ec2040;
+  }
+  .game-icon {
+    width: 100%;
+  }
+  .game-text {
+    color: #f0e6d2;
+  }
+  .game-positive {
+    background-color: #1ba9bd;
+  }
+  .game-negative {
+    background-color: #ec2040;
+  }
+  .game-center {
+    align-self: center;
+  }
+  .center-div {
+    max-width: 520px;
+    margin: auto;
+    padding: 10px;
+}

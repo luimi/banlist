@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="close()">
+      <ion-button fill="none">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-title>{{"report.title" | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<h1>{{"report.titlePositive" | translate}}</h1>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/trophy.svg" slot="start"></ion-icon> {{"report.positive1" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.pro"></ion-checkbox>
+</ion-item>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/thumbs-up.svg" slot="start"></ion-icon> {{"report.positive2" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.nice"></ion-checkbox>
+</ion-item>
+<h1>{{"report.titleNegative" | translate}}</h1>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/skull.svg" slot="start"></ion-icon> {{"report.negative1" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.feeder"></ion-checkbox>
+</ion-item>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/fire.svg" slot="start"></ion-icon> {{"report.negative2" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.flamer"></ion-checkbox>
+</ion-item>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/door-open.svg" slot="start"></ion-icon> {{"report.negative3" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.leaver"></ion-checkbox>
+</ion-item>
+<ion-item color="primary" lines="inset">
+  <ion-label><ion-icon src="../assets/icon/tongue-wink.svg" slot="start"></ion-icon> {{"report.negative4" | translate}}</ion-label>
+  <ion-checkbox slot="start" [(ngModel)]="report.troll"></ion-checkbox>
+</ion-item>
+<ion-item color="primary">
+  <ion-textarea placeholder="{{'report.comments' | translate}}" [(ngModel)]="report.note"></ion-textarea>
+</ion-item>
+<ion-item>
+  <button class="button-general" (click)="send()" [disabled]="!report.pro && !report.nice && !report.feeder && !report.flamer && !report.leaver && !report.troll">{{"general.send" | translate}}</button>
+</ion-item>
+</ion-content>

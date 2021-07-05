@@ -1,0 +1,11 @@
+const response = await Parse.Cloud.run("getSummoner", {server:"obxcsRWalM",summoner:"z0rk"});
+console.log(response);
+
+const response = await Parse.Cloud.run("getCurrentGame", {summoner:"HxiAtDym2a"});
+console.log(response);
+
+const response = await Parse.Cloud.run("report", {from:"ptQpS2Ogla", to:"7O8NELEqoN", game:"1", champion:"cgcQpdAAGi", pro:false, nice:false, feeder:true, flamer:false, leaver:false, troll: true});
+console.log(response);
+
+const response = await Parse.Cloud.run("updateSummoner", {summoner:"HxiAtDym2a"});
+console.log(response);
