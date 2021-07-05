@@ -1,8 +1,9 @@
 const axios = require("axios").default;
+const apiver = "11.13.1";
 
 Parse.Cloud.job("updateChampions", async (params, headers, log, message) => {
   const response = await getRequest(
-    "http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json"
+    "http://ddragon.leagueoflegends.com/cdn/"+apiver+"/data/en_US/champion.json"
   );
   const data = response.data.data;
   const ids = Object.keys(data);
@@ -10,7 +11,7 @@ Parse.Cloud.job("updateChampions", async (params, headers, log, message) => {
   let news = 0;
   for (let i = 0; i < ids.length; i++) {
     let exists = await new Parse.Query("Champion")
-      .equalTo("key", data[ids[i]].key)
+      .equalTo("key", parseInt(data[ids[i]].key))
       .first();
     if (!exists) {
       let champion = new Champion();
