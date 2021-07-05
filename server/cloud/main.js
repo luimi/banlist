@@ -1,9 +1,8 @@
 const axios = require("axios").default;
-const apiver = "11.13.1";
 
 Parse.Cloud.job("updateChampions", async (params, headers, log, message) => {
   const response = await getRequest(
-    "http://ddragon.leagueoflegends.com/cdn/"+apiver+"/data/en_US/champion.json"
+    "http://ddragon.leagueoflegends.com/cdn/11.13.1/data/en_US/champion.json"
   );
   const data = response.data.data;
   const ids = Object.keys(data);
