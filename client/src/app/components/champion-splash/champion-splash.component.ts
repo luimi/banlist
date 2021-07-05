@@ -9,8 +9,6 @@ export class ChampionSplashComponent implements OnInit {
   @Input() name;
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.name);
-  }
+  ngOnInit() { }
 
 }
