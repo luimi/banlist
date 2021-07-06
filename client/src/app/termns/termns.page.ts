@@ -8,6 +8,7 @@ import { ValidateService } from '../utils/validate.service';
   styleUrls: ['./termns.page.scss'],
 })
 export class TermnsPage implements OnInit {
+  isLoading = true;
   accepted = false;
   constructor(private navCtrl: NavController, private validate: ValidateService) { 
     
@@ -15,6 +16,9 @@ export class TermnsPage implements OnInit {
 
   ngOnInit() {
     this.validate.currentStatus("summoner");
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
   }
   continue(){
     localStorage.setItem("termns","true");
