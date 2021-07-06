@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { UtilsService } from '../utils/utils.service';
 import { ValidateService } from '../utils/validate.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-profile',
@@ -22,6 +23,7 @@ export class ProfilePage implements OnInit {
     CHALLENGER:9
   }
   summoner;
+  moment = moment;
   constructor(private validate: ValidateService, private utils: UtilsService, private loadingCtrl: LoadingController) { }
   ngOnInit(){}
   ionViewDidEnter() {

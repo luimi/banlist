@@ -4,8 +4,9 @@
   <app-profile-icon isProfile ="true" [icon]="summoner?.profileIcon"></app-profile-icon>
   <span class="lvl">{{summoner?.summonerLevel}}</span>
 </div>
+
 <ion-item class="update">
-  <button class="button-general" (click)="update()">{{"profile.update" | translate}}</button>
+  <button class="button-general" (click)="update()" [disabled]="moment().diff(moment(summoner?.updatedAt)) < 60000">{{"profile.update" | translate}}</button>
 </ion-item>
 <ion-item>
   <button class="button-general" (click)="change()">{{"profile.change" | translate}}</button>
