@@ -35,7 +35,6 @@ export class ProfilePage implements OnInit {
     } else {
       this.flag = "IRON";
     }
-    console.log(summoner, this.flag);
     this.summoner = summoner;
   }
   async update(){
