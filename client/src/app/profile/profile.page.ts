@@ -32,7 +32,10 @@ export class ProfilePage implements OnInit {
       this.flag = summoner.rankSolo;
     } else if(summoner.rank5x5) {
       this.flag = summoner.rank5x5;
+    } else {
+      this.flag = "IRON";
     }
+    console.log(summoner, this.flag);
     this.summoner = summoner;
   }
   async update(){
@@ -40,7 +43,7 @@ export class ProfilePage implements OnInit {
     await loading.present();
     this.utils.cloudCode("updateSummoner",{summoner: this.summoner.objectId},["general.errors.params","summoner.error2","summoner.error3"], (data) => {
       localStorage.setItem("summoner",JSON.stringify(data));
-      this.ngOnInit();
+      this.ionViewDidEnter();
       loading.dismiss();
     }, () => {
       loading.dismiss();
