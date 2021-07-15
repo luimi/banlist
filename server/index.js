@@ -22,8 +22,8 @@ var dashboard = new ParseDashboard({
   ],
   "users": [
     {
-      "user":"admin",
-      "pass":"admin"
+      "user":process.env.ADMIN,
+      "pass":process.env.PASSWORD
     }
   ]
 }, options);
