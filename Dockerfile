@@ -1,7 +1,5 @@
 FROM node:12.18.0
 
-RUN cd server/
-
 WORKDIR /opt/app
 
 ENV PORT=80
@@ -14,11 +12,11 @@ RUN echo 'crond' > /boot.sh
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 
-COPY package*.json ./
+COPY server/package*.json ./
 
 RUN npm install --production
 
 # Bundle app source
-COPY . .
+COPY server/ .
 
 CMD sh /boot.sh && npm start
