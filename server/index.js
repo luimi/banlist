@@ -12,7 +12,9 @@ var api = new ParseServer({
 });
 
 app.use('/parse', api);
-
+app.get('/', (req,res)=> {
+  res.send("Banlist");
+});
 app.listen(process.env.PORT, () => {
   console.log('Banlist ready');
 });
