@@ -10,7 +10,7 @@ export class AppComponent {
   constructor(private languageCtrl: LanguageService) {
     languageCtrl.getDefaultLanguage();
     Parse.initialize("9rjbqhVrs0VggxsF9DgCywTr2bL6WtWmWaROtxKU");
-    Parse.serverURL = 'https://banlist.openode.io/parse';
+    Parse.serverURL = 'https://banlist-production.up.railway.app/parse';
 
   }
 }
