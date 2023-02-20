@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appid: "9rjbqhVrs0VggxsF9DgCywTr2bL6WtWmWaROtxKU",
+  host: "https://lui2mi-banlist.glitch.me/parse"
 };
 
 /*
